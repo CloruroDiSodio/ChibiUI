@@ -18,7 +18,7 @@ jobs:
     name: Lint, types, unit/a11y tests, build, bundle size
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
         with:
@@ -40,7 +40,7 @@ jobs:
     name: E2E (axe in light/dark, keyboard, security headers)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
         with:
