@@ -1,7 +1,8 @@
 [build]
   # Runs from the repo root: builds @chibi-ui/react first, then the docs
   command = "pnpm build"
-  publish = ".next"
+  # Relative to the base directory (repo root), not this package directory
+  publish = "apps/docs/.next"
 
 [build.environment]
   NEXT_TELEMETRY_DISABLED = "1"
