@@ -109,7 +109,7 @@ function EarsIcon() {
       <ChibiMascot
         mood="happy"
         className={cn(
-          'hidden size-8 text-chibi-ring group-data-[state=open]:block',
+          'hidden size-8 text-chibi-accent group-data-[state=open]:block',
           'group-data-[state=open]:animate-chibi-wiggle motion-reduce:animate-none',
         )}
       />

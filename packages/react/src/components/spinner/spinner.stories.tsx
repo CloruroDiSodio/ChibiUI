@@ -15,8 +15,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Ring: Story = { args: { className: 'text-chibi-ring' } };
-export const Mascot: Story = { args: { variant: 'mascot', className: 'text-chibi-ring' } };
+export const Ring: Story = { args: { className: 'text-chibi-accent' } };
+export const Mascot: Story = { args: { variant: 'mascot', className: 'text-chibi-accent' } };
 
 export const Moods: Story = {
   render: () => (

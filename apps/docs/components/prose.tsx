@@ -12,7 +12,7 @@ export function PageHeader({
   return (
     <header className="mb-10 flex flex-col gap-3">
       {eyebrow && (
-        <p className="m-0 font-chibi-display text-sm font-semibold tracking-wider text-chibi-ring uppercase">
+        <p className="m-0 w-fit rounded-full bg-chibi-ghost-hover px-3 py-1 font-chibi-display text-xs font-semibold tracking-wider text-chibi-fg uppercase">
           {eyebrow}
         </p>
       )}

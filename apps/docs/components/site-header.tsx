@@ -15,7 +15,7 @@ export function SiteHeader() {
           href="/"
           className="flex items-center gap-2 font-chibi-display text-xl font-semibold text-chibi-fg no-underline"
         >
-          <ChibiMascot mood="happy" className="size-8 text-chibi-ring" />
+          <ChibiMascot mood="happy" className="size-8 text-chibi-accent" />
           {site.name}
         </Link>
         <nav aria-label="Main" className="flex items-center gap-1 sm:gap-2">

@@ -103,7 +103,7 @@ export const palette = {
 
 export type PaletteName = keyof typeof palette;
 
-const { blue, yellow, mint, coral, ink } = palette;
+const { blue, yellow, mint, lavender, coral, ink } = palette;
 
 /** Semantic colour roles. Components consume ONLY these, never the raw palette. */
 export interface SemanticColors {
@@ -115,6 +115,10 @@ export interface SemanticColors {
   border: string;
   borderStrong: string;
   ring: string;
+  /** Brand-coloured icons and illustrations (non-text, >= 3:1). */
+  accent: string;
+  /** Highlighter stroke behind body-coloured text (>= 4.5:1 with fg). */
+  highlight: string;
   overlay: string;
 
   primary: string;
@@ -150,18 +154,20 @@ export const lightColors: SemanticColors = {
   fgMuted: ink[600],
   border: ink[200],
   borderStrong: ink[500],
-  ring: mint[700],
+  ring: ink[900],
+  accent: mint[600],
+  highlight: mint[300],
   overlay: 'rgb(183 235 211 / 0.35)',
 
   primary: mint[300],
   primaryHover: mint[400],
   primaryFg: ink[950],
-  secondary: blue[200],
-  secondaryHover: blue[300],
+  secondary: lavender[200],
+  secondaryHover: lavender[300],
   secondaryFg: ink[950],
   ghostHover: mint[100],
   kawaiiFrom: mint[200],
-  kawaiiTo: blue[200],
+  kawaiiTo: lavender[200],
   kawaiiFg: ink[950],
 
   successSoft: mint[100],
@@ -187,17 +193,19 @@ export const darkColors: SemanticColors = {
   border: ink[700],
   borderStrong: ink[500],
   ring: mint[300],
+  accent: mint[300],
+  highlight: mint[800],
   overlay: 'rgb(18 23 21 / 0.55)',
 
   primary: mint[300],
   primaryHover: mint[200],
   primaryFg: ink[950],
-  secondary: blue[300],
-  secondaryHover: blue[200],
+  secondary: lavender[300],
+  secondaryHover: lavender[200],
   secondaryFg: ink[950],
   ghostHover: ink[800],
   kawaiiFrom: mint[300],
-  kawaiiTo: blue[300],
+  kawaiiTo: lavender[300],
   kawaiiFg: ink[950],
 
   successSoft: mint[900],

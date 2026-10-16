@@ -173,7 +173,7 @@ export function ChibiSelectItem({ className, children, ...props }: ChibiSelectIt
             viewBox="0 0 24 24"
             aria-hidden="true"
             focusable="false"
-            className="size-4 text-chibi-ring"
+            className="size-4 text-chibi-accent"
             fill="none"
             stroke="currentColor"
             strokeWidth={3}

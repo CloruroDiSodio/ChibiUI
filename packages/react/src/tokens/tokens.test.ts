@@ -36,6 +36,9 @@ const pairs: readonly { fg: Role; bg: Role; min: number; usage: string }[] = [
   { fg: 'borderStrong', bg: 'bg', min: AA.ui, usage: 'input boundary on page' },
   { fg: 'ring', bg: 'bg', min: AA.ui, usage: 'focus indicator on page' },
   { fg: 'ring', bg: 'surface', min: AA.ui, usage: 'focus indicator on surface' },
+  { fg: 'accent', bg: 'bg', min: AA.ui, usage: 'brand icons on page' },
+  { fg: 'accent', bg: 'surface', min: AA.ui, usage: 'brand icons on surface' },
+  { fg: 'fg', bg: 'highlight', min: AA.text, usage: 'highlighted text' },
   { fg: 'dangerFg', bg: 'surface', min: AA.ui, usage: 'invalid input border' },
 ];
 

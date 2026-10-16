@@ -27,6 +27,8 @@ const pairs: { fg: keyof SemanticColors; bg: keyof SemanticColors; label: string
     { fg: 'infoFg', bg: 'infoSoft', label: 'Info toast', min: AA.text },
     { fg: 'borderStrong', bg: 'surface', label: 'Input border', min: AA.ui },
     { fg: 'ring', bg: 'bg', label: 'Focus ring', min: AA.ui },
+    { fg: 'accent', bg: 'bg', label: 'Brand icons', min: AA.ui },
+    { fg: 'fg', bg: 'highlight', label: 'Highlighted text', min: AA.text },
   ];
 
 function ContrastTable({ name, colors }: { name: string; colors: SemanticColors }) {
