@@ -1,0 +1,120 @@
+/*
+ * ChibiUI theme for Tailwind CSS v4.
+ * Consumers running Tailwind can `@import "@chibi-ui/react/theme.css"` and
+ * `@source` the package dist; everyone else imports the precompiled styles.css.
+ */
+@import './tokens.css';
+
+@custom-variant reduce-transparency (@media (prefers-reduced-transparency: reduce));
+
+@theme {
+  --animate-chibi-spin: chibi-spin 0.8s linear infinite;
+  --animate-chibi-spin-slow: chibi-spin 2.4s linear infinite;
+  --animate-chibi-bob: chibi-bob 0.9s ease-in-out infinite;
+  --animate-chibi-accordion-down: chibi-accordion-down 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-chibi-accordion-up: chibi-accordion-up 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-chibi-pop-in: chibi-pop-in 220ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animate-chibi-pop-out: chibi-pop-out 140ms ease-in;
+  --animate-chibi-wiggle: chibi-wiggle 520ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  @keyframes chibi-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes chibi-bob {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-4deg);
+    }
+    50% {
+      transform: translateY(-18%) rotate(4deg);
+    }
+  }
+
+  @keyframes chibi-accordion-down {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+  }
+
+  @keyframes chibi-accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+    to {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes chibi-pop-in {
+    from {
+      opacity: 0;
+      transform: scale(0.92) translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes chibi-pop-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  @keyframes chibi-wiggle {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-14deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    75% {
+      transform: rotate(-6deg);
+    }
+  }
+}
+
+/*
+ * Scoped reset: the library deliberately does NOT ship Tailwind's global preflight,
+ * so it never restyles the host application. Only ChibiUI elements are normalised.
+ */
+@layer base {
+  :where([data-chibi]),
+  :where([data-chibi])::before,
+  :where([data-chibi])::after {
+    box-sizing: border-box;
+    border: 0 solid;
+  }
+
+  :where(button[data-chibi], input[data-chibi], [data-chibi] button, [data-chibi] input) {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    margin: 0;
+  }
+
+  :where(button[data-chibi], [data-chibi] button) {
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
