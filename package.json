@@ -1,0 +1,35 @@
+{
+  "name": "chibi-ui-monorepo",
+  "private": true,
+  "description": "ChibiUI \u2014 an accessible, kawaii-flavoured React component library.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.34.7",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @chibi-ui/react build && pnpm --parallel --filter @chibi-ui/react --filter docs dev",
+    "build": "pnpm --filter @chibi-ui/react build && pnpm --filter docs build",
+    "storybook": "pnpm --filter @chibi-ui/react storybook",
+    "build-storybook": "pnpm --filter @chibi-ui/react build-storybook",
+    "test": "pnpm --filter @chibi-ui/react test",
+    "test:coverage": "pnpm --filter @chibi-ui/react test:coverage",
+    "test:e2e": "pnpm --filter docs test:e2e",
+    "size": "pnpm --filter @chibi-ui/react size",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.71.2"
+  }
+}
