@@ -1,0 +1,17 @@
+/* Storybook-only entry: like src/styles/index.css, but also scans stories for utilities. */
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import '../src/styles/theme.css';
+@import 'tailwindcss/utilities.css' layer(utilities) source(none);
+
+@source "../src";
+
+/* Canvas chrome only: the library itself ships no global styles. */
+html,
+body,
+.docs-story {
+  background: var(--chibi-bg);
+  color: var(--chibi-fg);
+  font-family: var(--chibi-font-body);
+}
