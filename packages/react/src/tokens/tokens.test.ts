@@ -39,6 +39,9 @@ const pairs: readonly { fg: Role; bg: Role; min: number; usage: string }[] = [
   { fg: 'accent', bg: 'bg', min: AA.ui, usage: 'brand icons on page' },
   { fg: 'accent', bg: 'surface', min: AA.ui, usage: 'brand icons on surface' },
   { fg: 'fg', bg: 'highlight', min: AA.text, usage: 'highlighted text' },
+  // Glare is drawn at <= 70% opacity; testing at full strength covers the worst case.
+  { fg: 'fg', bg: 'glare', min: AA.text, usage: 'card text over tilt glare' },
+  { fg: 'fgMuted', bg: 'glare', min: AA.text, usage: 'card description over tilt glare' },
   { fg: 'dangerFg', bg: 'surface', min: AA.ui, usage: 'invalid input border' },
 ];
 

@@ -114,7 +114,7 @@ export function ChibiCard({
           'data-tilting:will-change-transform',
           // Soft glare that follows the cursor.
           'before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:opacity-0',
-          'before:bg-[radial-gradient(circle_at_var(--chibi-glare-x,50%)_var(--chibi-glare-y,50%),var(--chibi-mint-100),transparent_60%)]',
+          'before:bg-[radial-gradient(circle_at_var(--chibi-glare-x,50%)_var(--chibi-glare-y,50%),var(--chibi-glare),transparent_60%)]',
           'before:transition-opacity before:duration-300 data-tilting:before:opacity-70',
         ],
         className,

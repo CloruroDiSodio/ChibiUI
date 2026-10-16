@@ -97,6 +97,7 @@
   --chibi-ring: #1b2220;
   --chibi-accent: #2d8664;
   --chibi-highlight: #8ddcb9;
+  --chibi-glare: #d9f5e8;
   --chibi-overlay: rgb(183 235 211 / 0.35);
   --chibi-primary: #8ddcb9;
   --chibi-primary-hover: #63c79c;
@@ -142,6 +143,7 @@
   --chibi-ring: #8ddcb9;
   --chibi-accent: #8ddcb9;
   --chibi-highlight: #1b4b3a;
+  --chibi-glare: #123227;
   --chibi-overlay: rgb(18 23 21 / 0.55);
   --chibi-primary: #8ddcb9;
   --chibi-primary-hover: #b7ebd3;
@@ -184,6 +186,7 @@
     --chibi-ring: #8ddcb9;
     --chibi-accent: #8ddcb9;
     --chibi-highlight: #1b4b3a;
+    --chibi-glare: #123227;
     --chibi-overlay: rgb(18 23 21 / 0.55);
     --chibi-primary: #8ddcb9;
     --chibi-primary-hover: #b7ebd3;
@@ -225,6 +228,7 @@
   --color-chibi-ring: var(--chibi-ring);
   --color-chibi-accent: var(--chibi-accent);
   --color-chibi-highlight: var(--chibi-highlight);
+  --color-chibi-glare: var(--chibi-glare);
   --color-chibi-overlay: var(--chibi-overlay);
   --color-chibi-primary: var(--chibi-primary);
   --color-chibi-primary-hover: var(--chibi-primary-hover);

@@ -119,6 +119,8 @@ export interface SemanticColors {
   accent: string;
   /** Highlighter stroke behind body-coloured text (>= 4.5:1 with fg). */
   highlight: string;
+  /** Interactive-card tilt glare, rendered behind text (>= 4.5:1 with fg and fgMuted). */
+  glare: string;
   overlay: string;
 
   primary: string;
@@ -157,6 +159,7 @@ export const lightColors: SemanticColors = {
   ring: ink[900],
   accent: mint[600],
   highlight: mint[300],
+  glare: mint[100],
   overlay: 'rgb(183 235 211 / 0.35)',
 
   primary: mint[300],
@@ -195,6 +198,7 @@ export const darkColors: SemanticColors = {
   ring: mint[300],
   accent: mint[300],
   highlight: mint[800],
+  glare: mint[900],
   overlay: 'rgb(18 23 21 / 0.55)',
 
   primary: mint[300],
