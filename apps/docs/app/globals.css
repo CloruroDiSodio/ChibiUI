@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+/* Consuming ChibiUI the "Tailwind user" way: theme tokens + scan the published dist. */
+@import '@chibi-ui/react/theme.css';
+@source "../node_modules/@chibi-ui/react/dist";
+
+/* `dark:` follows ChibiUI's theme attribute (explicit dark, or system + OS preference). */
+@custom-variant dark {
+  &:where([data-chibi-theme='dark'], [data-chibi-theme='dark'] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where([data-chibi-theme='system'], [data-chibi-theme='system'] *) {
+      @slot;
+    }
+  }
+}
+
+/* Self-hosted fonts from next/font feed the design tokens. */
+:root {
+  --chibi-font-display:
+    var(--font-fredoka), ui-rounded, 'Hiragino Maru Gothic ProN', system-ui, sans-serif;
+  --chibi-font-body:
+    var(--font-outfit), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--chibi-bg);
+    color: var(--chibi-fg);
+    font-family: var(--chibi-font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--chibi-font-display);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--chibi-ring);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+/* Inline code in prose */
+@utility prose-code {
+  & :where(code):not(:where(pre code)) {
+    border-radius: 0.5rem;
+    background-color: var(--chibi-surface-muted);
+    padding: 0.1em 0.4em;
+    font-size: 0.9em;
+  }
+}
